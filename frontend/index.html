@@ -7,20 +7,30 @@
 </head>
 <body>
     <div id="titleContainer">
-        <h1 id="title">Title</h1>
+        <h1 id="title">Euro - US Dollar Exchange Rates over the Years</h1>
     </div>
-    <!--<p>This is just some random information!!!</p>-->
+    
+    <!--<p>Graph and Selection Field</p>-->
     <div id="graphOptionsContainer">
         <img src="./Picture1.png"/>
+        
         <div id="options">
+
             <div id="metricDisplayed">
-                <div>Variables</div>
+                <div class="subtitle">Variables</div>
+                <br>
                 <select>
                     <option value="price">Price</option>
                 </select>
             </div>
+
+            <br>
+            <br>
+            <br>
+
             <div id="price">
-                <div>Prices</div>
+                <div class="subtitle">Prices</div>
+                <br>
                 <label>
                     <input type="checkbox" name="price" value="high"> High
                 </label>
@@ -31,8 +41,14 @@
                     <input type="checkbox" name="price" value="average"> Average
                 </label>
             </div>
+            
+            <br>
+            <br>
+            <br>
+
             <div id="timeRestriction">
-                <div>Time period</div>
+                <div class="subtitle">Time period</div>
+                <br>
                 <label>
                     <input type="radio" name="time" value="day"> Day
                 </label>
@@ -43,6 +59,10 @@
                     <input type="radio" name="time" value="year"> Year
                 </label>
             </div>
+
+            <br>
+            <br>
+            <br>
 
             <div id="buttonContainer">
                 <button id="loadGraphButton" onclick="generateGraph()">Create Graph</button>
