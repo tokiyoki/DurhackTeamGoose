@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="titleContainer">
+        <h1 id="title">Title</h1>
+    </div>
+    <!--<p>This is just some random information!!!</p>-->
+    <div id="graphOptionsContainer">
+        <img src="./Picture1.png"/>
+        <div id="options">
+            <div id="metricDisplayed">
+                <div>Variables</div>
+                <select>
+                    <option value="price">Price</option>
+                </select>
+            </div>
+            <div id="price">
+                <div>Prices</div>
+                <label>
+                    <input type="checkbox" name="price" value="high"> High
+                </label>
+                <label>
+                    <input type="checkbox" name="price" value="low"> Low
+                </label>
+                <label>
+                    <input type="checkbox" name="price" value="average"> Average
+                </label>
+            </div>
+            <div id="timeRestriction">
+                <div>Time period</div>
+                <label>
+                    <input type="radio" name="time" value="day"> Day
+                </label>
+                <label>
+                    <input type="radio" name="time" value="month"> Month
+                </label>
+                <label>
+                    <input type="radio" name="time" value="year"> Year
+                </label>
+            </div>
+
+            <div id="buttonContainer">
+                <button id="loadGraphButton" onclick="generateGraph()">Create Graph</button>
+
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
