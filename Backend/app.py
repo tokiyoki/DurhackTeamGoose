@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, send_file, make_response
 import os
-import requests
 
 app = Flask(__name__)
 
@@ -27,7 +26,7 @@ def get_image():
         return response
         #return send_file(image_path, as_attachment=True)
     else:
-        return jsonify({"error": "Image not found"}, response)
+        return jsonify({"error": "Image not found"}, 404)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=False)
