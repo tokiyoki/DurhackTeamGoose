@@ -25,6 +25,13 @@ body {
     color: #8ea5ff;
     font-size: 60px;
     text-align: center;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  */
+    text-shadow:
+    0 0 7px #000,
+    0 0 10px #000,
+    0 0 21px #8ea5ffe5,
+    0 0 42px #8ea5ffc1,
+    0 0 65px #8ea5ff88;
 }
 
 /* Style for the subtitle text */
@@ -36,6 +43,7 @@ body {
     border: 3px solid #af3dff;
     border-radius: 10px;
     padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
 /* Rest of your CSS styles... */
@@ -70,6 +78,7 @@ body {
     max-width: 300px;
     margin-left: 50px;
     color: #00ffb8;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
 #metricDisplayed select{
@@ -80,6 +89,7 @@ body {
     border: none;
     border-radius: 10px;
     font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
 
@@ -97,4 +107,5 @@ body {
     border: none; /* Remove border for a cleaner look */
     border-radius: 5px; /* Add border-radius for rounded corners */
     cursor: pointer; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
