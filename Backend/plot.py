@@ -5,6 +5,7 @@ from matplotlib.lines import Line2D
 
 
 def plot_graph(working_directory, csv_name, table, date_type, price_types, y_axis):
+    plt.switch_backend('Agg')
     print("Starting render")
     legend = ["", "", ""]
     df = pd.read_csv(working_directory + 'fy19-23/' + csv_name)
@@ -66,7 +67,7 @@ def plot_graph(working_directory, csv_name, table, date_type, price_types, y_axi
         # preparing labels
         legend_labels.append(legend[counter])
         legend_colors.append(palettes[counter])
-        
+
         counter = counter + 1
 
     legend_objects = [Line2D([0], [0], color=color, lw=2, label=label) for label, color in zip(legend_labels, legend_colors)]
