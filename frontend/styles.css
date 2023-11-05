@@ -14,7 +14,7 @@ body {
 
 /* Style for the title text */
 #title {
-    color: #55ffe1;
+    color: #8ea5ff;
     font-size: 36px;
     text-align: center;
 }
@@ -22,6 +22,7 @@ body {
 /* Style for the subtitle text */
 .subtitle{
     font-size: 18px;
+    color: #00ffff;
     text-align: center;
     font-weight: bold;
     border: 3px solid #af3dff;
@@ -60,9 +61,17 @@ body {
     flex: 1; /* Allow it to take remaining space */
     max-width: 300px;
     margin-left: 50px;
-    color: #ff3b94;
+    color: #00ffb8;
 }
 
+#metricDisplayed select{
+    background-color: #242526;
+    color: #00ffb8;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
 
 
 #buttonContainer {
@@ -70,11 +79,11 @@ body {
 }
 
 #loadGraphButton {
-    background-color: #8ea5ff; /* Set the desired color using a color code or name */
-    color: #242526; /* Set the text color for better visibility, if needed */
-    font-size: 14px;
+    background-color: #ff00b4; /* Set the desired color using a color code or name */
+    color: #F6F5EE; /* Set the text color for better visibility, if needed */
+    font-size: 16px;
     font-weight: bold;
-    padding: 10px 20px; /* Add padding for better visual appearance */
+    padding: 7px; /* Add padding for better visual appearance */
     border: none; /* Remove border for a cleaner look */
     border-radius: 5px; /* Add border-radius for rounded corners */
     cursor: pointer; 
