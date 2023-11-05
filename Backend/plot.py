@@ -45,9 +45,9 @@ def plot_graph(csv_name,table, date_type, price_type):
     plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=260))
     new_file_name = "figure.png"
     plt.savefig(new_file_name)
+    plt.close()
     return new_file_name
 
 
 plot_graph('EURUSD.csv', table, 'Y', 'High')
-plt.close()
 plot_graph('EURUSD.csv', table, 'Y', 'Low')
