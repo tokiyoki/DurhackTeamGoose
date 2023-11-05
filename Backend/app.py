@@ -20,8 +20,20 @@ def get_image():
     #image_path = image_directory + '/pyramid_image.jpeg'
 
     data_type = request.args.get('data_type')
-    price = request.args.get('price')
+    price = request.args.get('price').split(',')
     time = request.args.get('time')
+
+    print(price)
+
+    price_no_empty = []
+
+    for price_temp in price:
+        if price_temp != "":
+            price_no_empty.append(price_temp)
+            print("Added", price_temp)
+        print("Not added", price_temp, "!")
+
+    print(price_no_empty)
 
     data_type_from = data_type[:3]
     data_type_to = data_type[3:]
@@ -40,8 +52,11 @@ def get_image():
     else:
         x_axis = "Unknown"
 
-    table = pd.DataFrame()
-    new_file_name = plot_graph(image_directory, data_type + '.csv', table, time, price, y_axis)
+    table = [pd.DataFrame(), pd.DataFrame(), pd.DataFrame()]
+
+    #price = ["Avg", "High"]
+
+    new_file_name = plot_graph(image_directory, data_type + '.csv', table, time, price_no_empty, y_axis)
 
     image_path = image_directory + new_file_name
 

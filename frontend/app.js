@@ -6,16 +6,15 @@ function generateGraph() {
     var selectedValue_data_type = selectElement.value;
 
     // Assuming you have the radio button elements with the same name attribute
-    var radioButtons = document.getElementsByName("price");
+    var checkboxButtons = document.getElementsByName("price");
 
     // Initialize a variable to store the selected value
-    var selectedValue_price;
+    var selectedValue_price = ["","",""];
 
     // Loop through the radio buttons to find the selected one
-    for (var i = 0; i < radioButtons.length; i++) {
-        if (radioButtons[i].checked) {
-            selectedValue_price = radioButtons[i].value;
-            break; // Exit the loop once a checked radio button is found
+    for (var i = 0; i < checkboxButtons.length; i++) {
+        if (checkboxButtons[i].checked) {
+            selectedValue_price[i] = checkboxButtons[i].value;
         }
     }
     // Assuming you have the radio button elements with the same name attribute
