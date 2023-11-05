@@ -3,7 +3,7 @@ import seaborn as sns
 import pandas as pd
 
 
-def plot_graph(working_directory, csv_name,table, date_type, price_type):
+def plot_graph(working_directory, csv_name,table, date_type, price_type, y_axis):
     legend = ""
     df = pd.read_csv(working_directory + 'fy19-23/' + csv_name)
     df['Date'] = pd.to_datetime(df['Date'], format='%Y%m%d')
@@ -41,11 +41,17 @@ def plot_graph(working_directory, csv_name,table, date_type, price_type):
     plt.legend(labels=[legend])
     if date_type == 'M':
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m-%Y'))
+        plt.xlabel("Month")
     elif date_type == 'Y':
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
+        plt.xlabel("Year")
     else:
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%d-%m-%Y'))
+        plt.xlabel("Date")
+        plt.xticks(rotation=6) 
+    plt.ylabel(y_axis)
     plt.gca().xaxis.set_major_locator(mdates.DayLocator(interval=260))
+
     new_file_name = "figure.png"
     plt.savefig(working_directory + new_file_name)
     plt.close()

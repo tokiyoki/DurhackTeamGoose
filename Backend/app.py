@@ -23,8 +23,25 @@ def get_image():
     price = request.args.get('price')
     time = request.args.get('time')
 
+    data_type_from = data_type[:3]
+    data_type_to = data_type[3:]
+
+    currency_from = abbreviation_to_currency(data_type_from)
+    currency_to = abbreviation_to_currency(data_type_to)
+
+    y_axis = "Price in " + currency_to + "s (per 1 " + currency_from + ")"
+
+    if time == "Y":
+        x_axis = "Year"
+    elif time == "M":
+        x_axis = "Month"
+    elif time == "D":
+        x_axis = "Day"
+    else:
+        x_axis = "Unknown"
+
     table = pd.DataFrame()
-    new_file_name = plot_graph(image_directory, data_type + '.csv', table, time, price)
+    new_file_name = plot_graph(image_directory, data_type + '.csv', table, time, price, y_axis)
 
     image_path = image_directory + new_file_name
 
@@ -44,6 +61,23 @@ def get_image():
         #return send_file(image_path, as_attachment=True)
     else:
         return jsonify({"error": "Image not found"}, 404)
+
+def abbreviation_to_currency(input_string):
+    if input_string == "BTC":
+        result_string = "Bitcoin"
+    elif input_string == "USD":
+        result_string = "US Dollar"
+    elif input_string == "GBP":
+        result_string = "British Pound"
+    elif input_string == "EUR":
+        result_string = "Euro"
+    elif input_string == "CAD":
+        result_string = "Canadian Dollar"
+    elif input_string == "JPY":
+        result_string = "Japanese Yen"
+    else:
+        result_string = "Unknown"
+    return result_string
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=False)
