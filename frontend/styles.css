@@ -1,9 +1,8 @@
 /* Style for the page body */
 
+/* Adding custom font */
 @font-face {
     font-family: 'digital-7';
-    /* src: url('digital-7.ttf') format('truetype'), */
-    /* src: url('file:/Users/charlottescherf/Documents/GitHub/DurhackTeamGoose/frontend/digital-7.regular.ttf') */
     src: url('digital-7.regular.ttf')
 }
 
@@ -25,7 +24,6 @@ body {
     color: #8ea5ff;
     font-size: 60px;
     text-align: center;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  */
     text-shadow:
     0 0 7px #000,
     0 0 10px #000,
@@ -56,13 +54,12 @@ body {
     padding: 20px;
     margin: auto;
     text-align: center;
-    display: flex; /* Use Flexbox */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    display: flex; 
+    flex-wrap: wrap; 
 }
 
 /* Style for the image within the graph options container */
 #graphOptionsContainer img {
-    /*max-width: 40%; /* Adjust the width as needed */
     width: auto;
     height: auto;
 }
@@ -74,7 +71,7 @@ body {
     padding: 10px;
     background-color: #242526;
     border: 1px solid #242526;
-    flex: 1; /* Allow it to take remaining space */
+    flex: 1; 
     max-width: 300px;
     margin-left: 50px;
     color: #00ffb8;
@@ -98,14 +95,14 @@ body {
 }
 
 #loadGraphButton {
-    background-color: #ff00b4; /* Set the desired color using a color code or name */
-    color: #F6F5EE; /* Set the text color for better visibility, if needed */
+    background-color: #ff00b4; 
+    color: #F6F5EE; 
     font-size: 16px;
     font-weight: bold;
     font-family: "digital-7", sans-serif;
-    padding: 7px; /* Add padding for better visual appearance */
-    border: none; /* Remove border for a cleaner look */
-    border-radius: 5px; /* Add border-radius for rounded corners */
+    padding: 7px; 
+    border: none; 
+    border-radius: 5px; 
     cursor: pointer; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
