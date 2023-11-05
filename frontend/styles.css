@@ -1,6 +1,14 @@
 /* Style for the page body */
+
+@font-face {
+    font-family: 'digital-7';
+    /* src: url('digital-7.ttf') format('truetype'), */
+    /* src: url('file:/Users/charlottescherf/Documents/GitHub/DurhackTeamGoose/frontend/digital-7.regular.ttf') */
+    src: url('digital-7.regular.ttf')
+}
+
 body {
-    font-family: "Arial", sans-serif;
+    font-family: "digital-7", sans-serif;
     background-color: #242526;
     margin: 0;
     padding: 0;
@@ -15,7 +23,7 @@ body {
 /* Style for the title text */
 #title {
     color: #8ea5ff;
-    font-size: 36px;
+    font-size: 60px;
     text-align: center;
 }
 
@@ -67,6 +75,7 @@ body {
 #metricDisplayed select{
     background-color: #242526;
     color: #00ffb8;
+    font-family: "digital-7", sans-serif;
     padding: 5px;
     border: none;
     border-radius: 10px;
@@ -83,6 +92,7 @@ body {
     color: #F6F5EE; /* Set the text color for better visibility, if needed */
     font-size: 16px;
     font-weight: bold;
+    font-family: "digital-7", sans-serif;
     padding: 7px; /* Add padding for better visual appearance */
     border: none; /* Remove border for a cleaner look */
     border-radius: 5px; /* Add border-radius for rounded corners */
