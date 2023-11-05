@@ -6,7 +6,7 @@ import pandas as pd
 
 from flask_cors import CORS
 
-image_directory = "/Users/charlottescherf/Documents/GitHub/DurhackTeamGoose/Backend"
+image_directory = "C:/Users/tokuk/Desktop/Durham Uni/Durhack/frontend/src/DurhackTeamGoose/Backend/"
 
 app = Flask(__name__)
 

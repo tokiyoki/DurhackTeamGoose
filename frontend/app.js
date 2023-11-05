@@ -42,7 +42,7 @@ function generateGraph() {
     console.log(queryString);
 
     // Make a GET request to the endpoint
-    fetch('http://10.249.63.105:5000/api/endpoint?' + queryString)
+    fetch('http://localhost:5000/api/endpoint?' + queryString)
         .then(response => {
             if (response.ok) {
                 return response.blob(); // Get the image data as a blob
