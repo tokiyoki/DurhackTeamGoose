@@ -5,33 +5,34 @@
     font-family: 'digital-7';
     src: url('digital-7.regular.ttf')
 }
-    
+
 body {
     font-family: "digital-7", sans-serif;
     background-color: #242526;
     margin: 0;
     padding: 0;
 }
-    
-    /* Style for the title container */
+
+/* Style for the title container */
 #titleContainer {
     text-align: center;
-    padding: 20px;
+    padding: 0,5%;
 }
-    
-    /* Style for the title text */
+
+
+/* Style for the title text */
 #title {
     color: #8ea5ff;
-    font-size: 60px;
+    font-size: 70px;
     text-align: center;
     text-shadow:
     0 0 7px #000,
     0 0 10px #000,
     0 0 21px #8ea5ffe5,
     0 0 42px #8ea5ffc1,
-    0 0 65px #8ea5ff88;
+    0 0 50px #8ea5ff88;
 }
-    
+
 /* Style for the subtitle text */
 .subtitle{
     font-size: 18px;
@@ -41,41 +42,48 @@ body {
     border: 3px solid #af3dff;
     border-radius: 10px;
     padding: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
-    
+
+/* Rest of your CSS styles... */
+
 /* Style for the graph options container */
 #graphOptionsContainer {
-    max-width: 1000px;
+    max-width: 80%;
+    max-height: 80%;
     background-color: #242526;
     border: 1px solid #242526;
     padding: 20px;
     margin: auto;
     text-align: center;
+    display: flex; 
+    flex-wrap: wrap; 
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-    
+
 /* Style for the image within the graph options container */
 #graphOptionsContainer img {
-    width: auto;
-    height: auto;
+    width: 800px;
+    height: auto; 
+
 }
-    
-    
+
+
 /* Style for the options container within the graph options container */
 #options {
     margin-top: 10px;
     padding: 10px;
     background-color: #242526;
     border: 1px solid #242526;
-    flex: 1;
+    flex: 1; 
     max-width: 300px;
-    margin-left: 50px;
     color: #00ffb8;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
-    
+
+
 #metricDisplayed select{
     background-color: #242526;
     color: #00ffb8;
@@ -84,24 +92,23 @@ body {
     border: none;
     border-radius: 10px;
     font-size: 18px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
-    
-    
+
+
 #buttonContainer {
     text-align: center;
 }
-    
+
 #loadGraphButton {
-    background-color: #ff00b4;
-    color: #F6F5EE;
+    background-color: #ff00b4; 
+    color: #F6F5EE; 
     font-size: 16px;
     font-weight: bold;
     font-family: "digital-7", sans-serif;
-    padding: 7px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 7px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
-    

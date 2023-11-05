@@ -2,6 +2,13 @@ import matplotlib.pyplot as plt, matplotlib.dates as mdates
 import seaborn as sns
 import pandas as pd
 from matplotlib.lines import Line2D
+import matplotlib.font_manager as fm
+
+custom_font_path = 'digital-7.regular.ttf'
+prop = fm.FontProperties(fname=custom_font_path)
+plt.rcParams['font.family'] = prop.get_name()
+legend_font_prop = fm.FontProperties(fname=custom_font_path)
+prop_ticks = fm.FontProperties(fname=custom_font_path)
 
 
 def plot_graph(working_directory, csv_name, table, date_type, price_types, y_axis):
@@ -46,6 +53,13 @@ def plot_graph(working_directory, csv_name, table, date_type, price_types, y_axi
                 'grid.color': '#242526',
                 'figure.facecolor': '#242526',
                 'text.color':'#F6F5EE'})
+
+    plt.xlabel("Month", fontproperties=prop, fontsize=15, weight='bold')
+    plt.ylabel(y_axis, fontproperties=prop, fontsize=15, weight='bold')
+
+    plt.xticks(fontproperties=prop_ticks, fontsize=12)
+    plt.yticks(fontproperties=prop_ticks, fontsize=15)
+    
     #sns.set_palette(["#ffac00", "#990000", "#009900"])
     #print(pd.melt(table, ['Date']))
     price_labels = {
@@ -72,7 +86,7 @@ def plot_graph(working_directory, csv_name, table, date_type, price_types, y_axi
 
     legend_objects = [Line2D([0], [0], color=color, lw=2, label=label) for label, color in zip(legend_labels, legend_colors)]
 
-    plt.legend(handles=legend_objects)
+    plt.legend(handles=legend_objects, prop=legend_font_prop, fontsize=15)
 
     if date_type == 'M':
         plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m-%Y'))
