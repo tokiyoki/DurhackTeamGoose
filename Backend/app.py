@@ -1,16 +1,33 @@
-from flask import Flask, jsonify, send_file, make_response
+from flask import Flask, jsonify, send_file, make_response, request
 import os
 
+from plot import plot_graph 
+import pandas as pd
+
+from flask_cors import CORS
+
+image_directory = "C:/Users/tokuk/Desktop/Durham Uni/Durhack/frontend/src/DurhackTeamGoose/Backend/"
+
 app = Flask(__name__)
+
+CORS(app)
 
 @app.route('/api/endpoint', methods=['GET'])
 def get_image():
     # Define the path to the image file on your PC using forward slashes
     #image_url = 'https://www.corinthiantravel.co.uk/blog/wp-content/uploads/2016/07/Everything-you-need-to-know-when-visiting-the-Pyramids-in-Cairo-Egypt.jpg'  # Update the filename as needed
 
-    image_path = 'OneDrive\\Pictures\\Saved Pictures\\pyramid_image.jpeg'
+    #image_path = image_directory + '/pyramid_image.jpeg'
 
-    
+    data_type = request.args.get('data_type')
+    price = request.args.get('price')
+    time = request.args.get('time')
+
+    table = pd.DataFrame()
+    new_file_name = plot_graph(image_directory, data_type + '.csv', table, time, price)
+
+    image_path = image_directory + new_file_name
+
 
     # Check if the request was successful (status code 200)
     if os.path.exists(image_path):
